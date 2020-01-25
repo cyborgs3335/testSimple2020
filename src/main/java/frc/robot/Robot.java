@@ -28,9 +28,11 @@ public class Robot extends TimedRobot {
   private final WPI_TalonSRX backLeftController = new WPI_TalonSRX(3);
   private final WPI_TalonSRX backRightController = new WPI_TalonSRX(4);
 
-  private final DifferentialDrive m_robotDrive
-      = new DifferentialDrive(new SpeedControllerGroup(frontLeftController, backLeftController),
-          new SpeedControllerGroup(frontRightController, backRightController));
+  private final SpeedControllerGroup leftGroup = new SpeedControllerGroup(frontLeftController
+      /*, backLeftController*/);
+  private final SpeedControllerGroup rightGroup = new SpeedControllerGroup(frontRightController
+      /*, backRightController*/);
+  private final DifferentialDrive m_robotDrive = new DifferentialDrive(leftGroup, rightGroup);
   private final Joystick m_stick = new Joystick(0);
   private final Timer m_timer = new Timer();
 
