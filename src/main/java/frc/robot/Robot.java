@@ -10,7 +10,6 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -24,10 +23,10 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
  * directory.
  */
 public class Robot extends TimedRobot {
-  private final WPI_TalonSRX frontLeftController = new WPI_TalonSRX(0);
-  private final WPI_TalonSRX frontRightController = new WPI_TalonSRX(1);
-  private final WPI_TalonSRX backLeftController = new WPI_TalonSRX(2);
-  private final WPI_TalonSRX backRightController = new WPI_TalonSRX(3);
+  private final WPI_TalonSRX frontLeftController = new WPI_TalonSRX(1);
+  private final WPI_TalonSRX frontRightController = new WPI_TalonSRX(2);
+  private final WPI_TalonSRX backLeftController = new WPI_TalonSRX(3);
+  private final WPI_TalonSRX backRightController = new WPI_TalonSRX(4);
 
   private final DifferentialDrive m_robotDrive
       = new DifferentialDrive(new SpeedControllerGroup(frontLeftController, backLeftController),
